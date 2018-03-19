@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
+
+  <title>Mainca</title>
+
+  <link rel="stylesheet" href="../lib/Hover/hover.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../lib/weather-icons/css/weather-icons.css">
+  <link rel="stylesheet" href="../lib/ionicons/css/ionicons.css">
+  <link rel="stylesheet" href="../lib/jquery-toggles/toggles-full.css">
+  <link rel="stylesheet" href="../lib/morrisjs/morris.css">
+
+  <link rel="stylesheet" href="../css/quirk.css">
+
+  <script src="../lib/modernizr/modernizr.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../lib/html5shiv/html5shiv.js"></script>
+  <script src="../lib/respond/respond.src.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<header>
+  <div class="headerpanel">
+
+    <div class="logopanel">
+      <h3><a href="index.html">Mainca</a></h3>
+    </div><!-- logopanel -->
+
+    <div class="headerbar">
+
+      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+
+      <div class="header-right">
+        <ul class="headermenu">
+          <li>
+            <div class="btn-group">
+              <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                <img src="../images/photos/loggeduser.jpg" alt="" />
+                <span class="text-warning"><b>Mauri Rivas</b></span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                <li><a href="#"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Ayuda</a></li>
+                <li><a href="login.html"><i class="glyphicon glyphicon-log-out"></i> Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div><!-- header-right -->
+    </div><!-- headerbar -->
+  </div><!-- header-->
+</header>
+
+<section>
+
+  <div class="leftpanel">
+    <div class="leftpanelinner">
+
+      <!-- ################## LEFT PANEL PROFILE ################## -->
+
+      <div class="media leftpanel-profile">
+        <div class="media-left">
+          <a href="#">
+            <img src="../images/photos/loggeduser.jpg" alt="" class="media-object img-circle">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Mauri Rivas <a data-toggle="collapse" data-target="#loguserinfo" class="pull-right"><i class="fa fa-angle-down"></i></a></h4>
+          <span>Administrador</span>
+        </div>
+      </div><!-- leftpanel-profile -->
+
+      <div class="leftpanel-userinfo collapse" id="loguserinfo">
+        <h5 class="sidebar-title">Dirección</h5>
+        <address>
+          Valencia
+        </address>
+        <h5 class="sidebar-title">Contacto</h5>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <label class="pull-left">Email</label>
+            <span class="pull-right">mauris@mainca.com.ve</span>
+          </li>
+          <li class="list-group-item">
+            <label class="pull-left">Celular</label>
+            <span class="pull-right">0424-4441000</span>
+          </li>
+        </ul>
+      </div><!-- leftpanel-userinfo -->
+
+      <ul class="nav nav-tabs nav-justified nav-sidebar">
+        <li class="tooltips active" data-toggle="tooltip" title="Menú Principal"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
+        <li class="tooltips" data-toggle="tooltip" title="Configuración"><a href="#"><i class="fa fa-cog"></i></a></li>
+        <li class="tooltips" data-toggle="tooltip" title="Cerrar Sesión"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- ################# MAIN MENU ################### -->
+
+        <div class="tab-pane active" id="mainmenu">
+          <h5 class="sidebar-title">Favorites</h5>
+          <ul class="nav nav-pills nav-stacked nav-quirk">
+            <li class="active"><a href="#"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+            <li><a href="#"><i class="fa fa-briefcase"></i> <span>Materiales</span></a></li>
+            <li><a href="#"><i class="fa fa-truck"></i> <span>Equipos</span></a></li>
+            <li><a href="#"><i class="fa fa-street-view"></i> <span>Personas</span></a></li>
+            <li><a href="#"><i class="fa fa-map-marker"></i> <span>Ubicar Materiales y Equipos</span></a></li>
+          </ul>
+
+          <h5 class="sidebar-title">MAENCA</h5>
+          <ul class="nav nav-pills nav-stacked nav-quirk">
+            <li class="nav-parent">
+              <a href=""><i class="fa fa-briefcase"></i> <span>Gestionar Materiales</span></a>
+              <ul class="children">
+                <li><a href="#">Tipos</a></li>
+                <li><a href="#">Entrada</a></li>
+                <li><a href="#">Salida</a></li>
+                <li><a href="#">Mantenimiento</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <a href=""><i class="fa fa-truck"></i> <span>Gestionar Equipos</span></a>
+              <ul class="children">
+                <li><a href="#">Tipos</a></li>
+                <li><a href="#">Entrada</a></li>
+                <li><a href="#">Salida</a></li>
+                <li><a href="#">Mantenimiento</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="fa fa-street-view"></i> <span>Gestionar Personas</span></a>
+              <ul class="children">
+                <li><a href="#">Profesiones</a></li>
+                <li><a href="#">Tipos de Personas</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <li><a href="#"><i class="fa fa-user"></i> <span>Gestionar Usuarios</span></a></li>
+            </li>
+          </ul>
+        </div><!-- tab-pane -->
+
+      </div><!-- tab-content -->
+
+    </div><!-- leftpanelinner -->
+  </div><!-- leftpanel -->
+
+  <div class="mainpanel">
+
+    <!--<div class="pageheader">
+      <h2><i class="fa fa-home"></i> Dashboard</h2>
+    </div>-->
+
+    <div class="contentpanel">
+
+      <div class="row">
+        <div class="col-md-12 col-lg-8 dash-left">
+          <div class="panel panel-announcement">
+            <ul class="panel-options">
+              <li><a><i class="fa fa-refresh"></i></a></li>
+              <li><a class="panel-remove"><i class="fa fa-remove"></i></a></li>
+            </ul>
+            <div class="panel-heading">
+              <h4 class="panel-title">Bienvenido, mainca</h4>
+            </div>
+            <div class="panel-body">
+              <h2><img src="../images/photos/logo.png"/><br>
+			             Usa esta herramienta para <span class="text-primary">Organizar</span> y llevar un adecuado seguimiento de los <span class="text-success">Materiales y Equipos</span> que entran y salen de Mainca!</h2>
+
+            </div>
+          </div><!-- panel -->
+
+          <div class="row panel-quick-page">
+            <div class="col-xs-4 col-sm-5 col-md-4 page-user">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Gestionar Usuarios</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="icon ion-person-stalker"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 page-products">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Materiales</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="fa fa-briefcase"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-3 col-md-2 page-events">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Entrada materiales</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="fa fa-plus-circle"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-3 col-md-2 page-messages">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Salida materiales</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="fa fa-minus-circle"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-5 col-md-2 page-reports">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Reportes</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="icon ion-arrow-graph-up-right"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-2 page-statistics">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Estadisticas</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="icon ion-ios-pulse-strong"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 page-support">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Respaldo Base de Datos</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="fa fa-database"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-2 page-privacy">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Privacidad</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class="icon ion-android-lock"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-2 page-settings">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Configuración</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="page-icon"><i class=" fa fa-wrench"></i></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- row -->
+
+        </div><!-- col-md-9 -->
+      </div><!-- row -->
+
+    </div><!-- contentpanel -->
+
+  </div><!-- mainpanel -->
+
+</section>
+
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/jquery-toggles/toggles.js"></script>
+
+<script src="../lib/morrisjs/morris.js"></script>
+<script src="../lib/raphael/raphael.js"></script>
+
+<script src="../lib/flot/jquery.flot.js"></script>
+<script src="../lib/flot/jquery.flot.resize.js"></script>
+<script src="../lib/flot-spline/jquery.flot.spline.js"></script>
+
+<script src="../lib/jquery-knob/jquery.knob.js"></script>
+
+<script src="../js/quirk.js"></script>
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>
